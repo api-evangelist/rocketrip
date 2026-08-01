@@ -1,8 +1,24 @@
 aid: rocketrip
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/rocketrip.png
 name: Rocketrip
-description: Rocketrip is a company surfaced as a portfolio company of canaan-partners, gv and added to
-  the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: Rocketrip was a New York City corporate travel cost-savings platform that gave business
+  travelers a personalized budget (a "Price to Beat") and rewarded employees who booked flights, hotels,
+  and rail below it, sharing the savings between the traveler and the company. It was backed by Canaan
+  Partners, GV, Bessemer, and Y Combinator. As of this enrichment pass the rocketrip.com and
+  www.rocketrip.com domains 301-redirect to Tabhi (tabhi.ai / tabhi.com), the developer, docs, and api
+  subdomains no longer resolve, and no public API, developer portal, or OpenAPI could be found — the
+  standalone Rocketrip product and its API surface appear to have been retired or folded into Tabhi.
 url: https://raw.githubusercontent.com/api-evangelist/rocketrip/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -13,9 +29,15 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
+- Travel
+- Corporate Travel
+- Expense Management
+- Travel Management
+- Fintech
+- Rewards
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,5 +45,14 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/rocketrip-domain-security.yml
 - type: Website
-  url: http://rocketrip.com
+  url: https://rocketrip.com
+x-enrichment:
+  date: '2026-07-21'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
+  note: No public API/developer surface; rocketrip.com now 301-redirects to Tabhi (tabhi.ai).
+    Only a live domain-security probe of the still-resolving registrable domain yielded a real artifact.
